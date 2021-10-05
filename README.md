@@ -7,13 +7,13 @@ HTTP request ser ut
 * [x] Maven
 * [x] Github Actions
 * [x] Working branch
-* [ ] Pull request
-* [ ] Test report
+* [x] Pull request
+* [x] Test report
 
 ## Repeat av lecture 3: Socket, HTTP
 
-* [ ] Socket connects server
-* [ ] Status code
+* [x] Socket connects server
+* [x] Status code
 * [ ] Content-length
 * [ ] Message body
 
