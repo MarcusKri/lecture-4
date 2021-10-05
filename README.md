@@ -5,9 +5,10 @@ HTTP request ser ut
 ## Repeat av lecture 2
 
 * [x] Maven
-* [ ] Github Actions
-* [ ] Working branch
+* [x] Github Actions
+* [x] Working branch
 * [ ] Pull request
+* [ ] Test report
 
 ## Repeat av lecture 3: Socket, HTTP
 
