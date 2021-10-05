@@ -9,6 +9,7 @@ import java.util.Map;
 public class HttpClient {
     private final int statusCode;
     private final Map<String, String> headerFields = new HashMap<>();
+    private String messageBody;
 
     public HttpClient(String host, int port, String requestTarget) throws IOException {
         Socket socket = new Socket(host, port); //Socket = connecter til en server (host og porten som er angitt)
@@ -29,6 +30,17 @@ public class HttpClient {
             String headerValue = headerLine.substring(colonPos+1).trim();
             headerFields.put(headerField, headerValue);
         }
+
+        this.messageBody = readBytes(socket, getContentLength());
+    }
+
+    private String readBytes(Socket socket, int contentLength) throws IOException {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < contentLength; i++) {
+            result.append((char)socket.getInputStream().read());
+        }
+
+        return result.toString();
     }
 
     private String readLine(Socket socket) throws IOException {
@@ -51,5 +63,9 @@ public class HttpClient {
 
     public int getContentLength() {
         return Integer.parseInt(getHeader("Content-Length"));
+    }
+
+    public String getMessageBody() {
+        return messageBody;
     }
 }
