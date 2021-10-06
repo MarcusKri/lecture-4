@@ -45,24 +45,26 @@ public class HttpServer {
     }
 
     public static void main(String[] args) throws IOException {
+        new HttpServer(1997); //localhost:1997/hello
+        ////Sette opp en webserver
+        ////Kommenterer ut dette siden jeg har lagd en serverSocket aka website.
+//        ServerSocket serverSocket = new ServerSocket(1997);
+//
+//        Socket clientSocket = serverSocket.accept();
+//
+//        String html = "Hello World";
+//        String contentType = "text/html";
+//
+//        String response = "HTTP/1.1 200 Det gikk bra aka OK fra sia\r\n" +
+//                "Content-Length: " + html.getBytes().length + "\r\n" +
+//                "Content-Type: " + contentType + "\r\n" +
+//                "Connection: close\r\n" +
+//                "\r\n" +
+//                html;
 
-        //Sette opp en webserver
-        ServerSocket serverSocket = new ServerSocket(1997);
-
-        Socket clientSocket = serverSocket.accept();
-
-        String html = "Hello World";
-        String contentType = "text/html";
-
-        String response = "HTTP/1.1 200 Det gikk bra aka OK fra sia\r\n" +
-                "Content-Length: " + html.getBytes().length + "\r\n" +
-                "Content-Type: " + contentType + "\r\n" +
-                "Connection: close\r\n" +
-                "\r\n" +
-                html;
-
-        clientSocket.getOutputStream().write(response.getBytes());
-        //Sette opp en webserver finito
+        //clientSocket.getOutputStream().write(response.getBytes());
+        ////Kommenterer ut dette siden jeg har lagd en serverSocket.
+        ////Sette opp en webserver finito
 
 //        ServerSocket serverSocket = new ServerSocket(8080); //Localhost:8080
 //
