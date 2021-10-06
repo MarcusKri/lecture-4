@@ -77,4 +77,8 @@ public class HttpServer {
 //                        response
 //        ).getBytes());
     }
+
+    public int getPort() {
+        return serverSocket.getLocalPort();
+    }
 }
