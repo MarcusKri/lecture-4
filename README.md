@@ -23,7 +23,7 @@ HTTP request ser ut
 
 ## TODAY: HttpServer
 
-* [ ] HttpServer should respond with 404
+* [x] HttpServer should respond with 404
 * [ ] HttpServer should include request target in 404
 * [ ] Return a static content for /hello
 * [ ] Content-type
