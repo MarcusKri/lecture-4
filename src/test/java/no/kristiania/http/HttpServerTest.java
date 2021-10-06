@@ -48,4 +48,5 @@ public class HttpServerTest {
         HttpClient client = new HttpClient("localhost", server.getPort(), "/example-file.txt");
         assertEquals(fileContent, client.getMessageBody());
     }
+    // Opptak 5, sluttet på 20 min igjen. Skulle gjøre om en index.html til å lese index.txt
 }

@@ -5,6 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class HttpServer {
 
@@ -63,7 +64,8 @@ public class HttpServer {
     }
 
     public static void main(String[] args) throws IOException {
-        new HttpServer(1997); //localhost:1997/hello
+        HttpServer httpServer = new HttpServer(1997); //localhost:1997/hello
+        httpServer.setRoot(Paths.get("."));
         ////Sette opp en webserver
         ////Kommenterer ut dette siden jeg har lagd en serverSocket aka website.
 //        ServerSocket serverSocket = new ServerSocket(1997);
