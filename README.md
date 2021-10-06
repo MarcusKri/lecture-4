@@ -26,5 +26,8 @@ HTTP request ser ut
 * [ ] HttpServer should respond with 404
 * [ ] HttpServer should include request target in 404
 * [ ] Return a static content for /hello
-* [ ] Return HTML file from disk
 * [ ] Content-type
+* [ ] Return HTML file from disk
+* [ ] Return <form>
+* [ ] Process GET request for form
+* [ ] Process POST request from form
